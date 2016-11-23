@@ -1,0 +1,54 @@
+
+                    ***** HPCmatlab software framework *****
+
+
+  About HPCmatlab
+  ---------------
+
+  HPCmatlab is a framework for fast prototyping of parallel
+  applications on Matlab.
+
+
+  Version 2.0
+  -----------
+
+  This version includes the MEX functions for using the
+  Message Passing Interface module in Matlab.
+
+
+  Documentation
+  -------------
+
+  The User Guide for this version is included in form of the PDF file
+  HPCmatlab_1.0_User_Guide.pdf under docs/
+
+  For users new to parallel programming, we recommend referring the Basic
+  user guide first to get started with the framework.
+
+
+  Examples
+  --------
+
+  The examples of simple programs using point-to-point, collective and
+  one-sided communications are included under examples/ in sub-directories
+  named accordingly. They also have sample job submission files for
+  Saguaro and Ocotillo. They can also be run interactively.
+
+
+  Installation and Use
+  --------------------
+
+  On Saguaro and Ocotillo at ASU:
+
+    o The framework has been compiled and installed as a package.
+
+    o Use 'module load hpcmatlab/1.0' to directly start using the MEX functions.
+
+
+  Contact
+  -------
+
+     o Email your questions, bug reports, comments, feedback and suggestions to
+
+       <support@hpchelp.asu.edu>
+

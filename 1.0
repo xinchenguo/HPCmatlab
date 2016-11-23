@@ -1,0 +1,63 @@
+
+#%Module1.0
+
+## Module file for HPCmatlab/1.0
+
+proc ModulesHelp { } {
+  puts stderr "HPCmatlab/1.0: Sets the environment for using HPCmatlab by loading Matlab and MPI modules and adding MEX functions' path to Matlab search path"
+  puts stderr "MPI module being used: intel-mpi/5.0, no other MPI module should be loaded when loading this module. If other MPI module is to be used, unload intel-mpi after loading HPCmatlab and then load the other MPI module"
+}
+module-whatis "HPCmatlab/1.0: Sets the environment for using HPCmatlab by loading Matlab and MPI modules and adding MEX functions' path to Matlab search path"
+
+#source $env(MODULESHOME)/modulefiles/.5xonly
+
+#source $env(MODULESHOME)/modulefiles/.6xonly
+
+#source $env(MODULESHOME)/modulefiles/.gui_warning 
+
+#source $env(MODULESHOME)/modulefiles/.deprecated_warning
+
+#source $env(MODULESHOME)/modulefiles/.experimental_warning
+
+#source $env(MODULESHOME)/modulefiles/.discouraged_warning
+
+#source $env(MODULESHOME)/modulefiles/.retired_error
+
+module load intel-mpi/5.0
+module load matlab/2015a
+prereq intel-mpi/5.0
+prereq matlab/2015a
+
+set topdir /packages/6x/HPCmatlab/1.0
+
+prepend-path MATLABPATH $topdir/matlab
+
+# A2C2 FIELDS
+setenv A2C2_5X "0"
+setenv A2C2_6X "1"
+setenv A2C2_NOLOGIN "0"
+setenv A2C2_DEPRECATED "0"
+setenv A2C2_EXPERIMENTAL "1"
+setenv A2C2_DISCOURAGED "0"
+setenv A2C2_RETIRED "0"
+setenv A2C2_VIRTUAL "0"
+
+setenv A2C2_TAGS "parallel programming for MATLAB"
+setenv A2C2_DESCRIPTION "HPCmatlab/1.0 provides MPI communication functions which can be called from MATLAB"
+setenv A2C2_URL ""
+setenv A2C2_NOTES ""
+
+setenv A2C2_INSTALL_DATE "2015-09-28"
+setenv A2C2_INSTALLER "leereyno"
+setenv A2C2_BUILDPATH "/packages/6x/build/HPCmatlab/1.0/"
+
+setenv A2C2_MODIFY_DATE "YYYY-MM-DD" 
+setenv A2C2_MODIFIER "<ASURITE>"
+
+setenv A2C2_VERIFY_DATE "YYYY-MM-DD"
+setenv A2C2_VERIFIER "<ASURITE>"
+
+source $env(MODULESHOME)/modulefiles/.unset_a2c2
+
+# vim: ft=tcl
+
