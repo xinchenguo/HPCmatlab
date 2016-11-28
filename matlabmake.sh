@@ -9,6 +9,5 @@ do
     echo $file
     mex $file $mexcompiler COPTIMFLAGS="-O2 -DNDEBUG" LDOPTIMFLAGS="-O2"
 done
-mv *.mexa64 matlab
+mv *.mex* matlab
 cp ./source/*.m matlab
-##chgrp A2C2dev matlab

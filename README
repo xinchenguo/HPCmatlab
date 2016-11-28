@@ -1,54 +1,67 @@
 
-                    ***** HPCmatlab software framework *****
+                  ***** HPCmatlab software framework *****
+
+About HPCmatlab
+---------------
+
+HPCmatlab is a framework for fast prototyping of parallel applications on Matlab.
+It uses the Message Passing Interface (MPI) for sending and receiving messages among
+different Matlab processes. The users can use mex functions with syntax similar 
+to the MPI standard syntax.
 
 
-  About HPCmatlab
-  ---------------
+Version 1.0
+-----------
 
-  HPCmatlab is a framework for fast prototyping of parallel
-  applications on Matlab.
-
-
-  Version 2.0
-  -----------
-
-  This version includes the MEX functions for using the
-  Message Passing Interface module in Matlab.
+This version includes our MPI functions.
 
 
-  Documentation
-  -------------
+Documentation
+-------------
 
-  The User Guide for this version is included in form of the PDF file
-  HPCmatlab_1.0_User_Guide.pdf under docs/
+The User Guide for this version is included in form of the PDF file
+"HPCmatlab_1.0_User_Guide.pdf" under doc/
 
-  For users new to parallel programming, we recommend referring the Basic
-  user guide first to get started with the framework.
+For users new to parallel programming, we recommend trying out the simple 
+send-receive examples first to get started with the framework.
 
-
-  Examples
-  --------
-
-  The examples of simple programs using point-to-point, collective and
-  one-sided communications are included under examples/ in sub-directories
-  named accordingly. They also have sample job submission files for
-  Saguaro and Ocotillo. They can also be run interactively.
+For details on implementation and performance results, refer our conference paper 
+also under doc/
+URL: http://www.sciencedirect.com/science/article/pii/S1877050916309516
 
 
-  Installation and Use
-  --------------------
+Examples
+--------
 
-  On Saguaro and Ocotillo at ASU:
-
-    o The framework has been compiled and installed as a package.
-
-    o Use 'module load hpcmatlab/1.0' to directly start using the MEX functions.
+The examples of simple programs using point-to-point, collective and one-sided 
+communications are included under examples/ directory.
+They also have sample job submission files for SLURM.
 
 
-  Contact
-  -------
+Installation and Use
+--------------------
 
-     o Email your questions, bug reports, comments, feedback and suggestions to
+GitHub download page: https://github.com/xinchenguo/HPCmatlab
 
-       <support@hpchelp.asu.edu>
+1) Make sure Matlab's "mex" compiler is in your $PATH.
+Also, mpicc and mpicxx should be in $PATH with all environment variables set up 
+for MPI libraries.
 
+2) Run "make" to compile the MEX functions from source code.
+The MEX functions will be placed under matlab/ directory.
+
+3) There are two ways to add the path to these functions to Matlab's search path:
+
+    o Before running your script, set the "MATLABPATH" environment variable, e.g.
+      export MATLABPATH=/path/to/HPCmatlab/matlab:$MATLABPATH
+
+    o At the start of your Matlab script, use Matlab's "addpath" function.
+      Refer examples for how to do this.
+
+
+Contact
+-------
+
+Use our GitHub page for questions, bug reports, comments, feedback and suggestions:
+
+https://github.com/xinchenguo/HPCmatlab/issues
