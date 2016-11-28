@@ -22,8 +22,8 @@ Documentation
 The User Guide for this version is included in form of the PDF file
 "HPCmatlab_1.0_User_Guide.pdf" under doc/
 
-For users new to parallel programming, we recommend referring the Basic user guide
-first to get started with the framework.
+For users new to parallel programming, we recommend trying out the simple 
+send-receive examples first to get started with the framework.
 
 For details on implementation and performance results, refer our conference paper 
 also under doc/
@@ -40,6 +40,8 @@ They also have sample job submission files for SLURM.
 
 Installation and Use
 --------------------
+
+GitHub download page: https://github.com/xinchenguo/HPCmatlab
 
 1) Make sure Matlab's "mex" compiler is in your $PATH.
 Also, mpicc and mpicxx should be in $PATH with all environment variables set up 
@@ -62,4 +64,4 @@ Contact
 
 Use our GitHub page for questions, bug reports, comments, feedback and suggestions:
 
-https://github.com/xinchenguo/HPCmatlab
+https://github.com/xinchenguo/HPCmatlab/issues
