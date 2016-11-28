@@ -54,7 +54,8 @@ The MEX functions will be placed under `matlab/` directory.
 3. There are two ways to add the path to these functions to Matlab's search path:
 
   * Before running your script, set the `MATLABPATH` environment variable, e.g.
-      `export MATLABPATH=/path/to/HPCmatlab/matlab:$MATLABPATH`
+  
+  `export MATLABPATH=/path/to/HPCmatlab/matlab:$MATLABPATH`
 
   * At the start of your Matlab script, use Matlab's `addpath` function.
 Refer examples for how to do this.
