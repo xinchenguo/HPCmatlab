@@ -49,7 +49,7 @@ Also, `mpicc` and `mpicxx` should be in $PATH with all environment variables set
 for MPI libraries.
 
 2. Run `make` to compile the MEX functions from source code.
-The MEX functions will be placed under matlab/ directory.
+The MEX functions will be placed under `matlab/` directory.
 
 3. There are two ways to add the path to these functions to Matlab's search path:
 
