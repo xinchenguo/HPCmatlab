@@ -44,20 +44,20 @@ Installation and Use
 
 GitHub download page: https://github.com/xinchenguo/HPCmatlab
 
-1) Make sure Matlab's `mex` compiler is in your $PATH.
+1. Make sure Matlab's `mex` compiler is in your $PATH.
 Also, `mpicc` and `mpicxx` should be in $PATH with all environment variables set up 
 for MPI libraries.
 
-2) Run `make` to compile the MEX functions from source code.
+2. Run `make` to compile the MEX functions from source code.
 The MEX functions will be placed under matlab/ directory.
 
-3) There are two ways to add the path to these functions to Matlab's search path:
+3. There are two ways to add the path to these functions to Matlab's search path:
 
-    o Before running your script, set the `MATLABPATH` environment variable, e.g.
+  * Before running your script, set the `MATLABPATH` environment variable, e.g.
       `export MATLABPATH=/path/to/HPCmatlab/matlab:$MATLABPATH`
 
-    o At the start of your Matlab script, use Matlab's `addpath` function.
-      Refer examples for how to do this.
+  * At the start of your Matlab script, use Matlab's `addpath` function.
+Refer examples for how to do this.
 
 
 Contact
