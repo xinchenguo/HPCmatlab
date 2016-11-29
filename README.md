@@ -69,39 +69,22 @@ https://github.com/xinchenguo/HPCmatlab/issues
 
 Citation
 --------
-'
-@article{Guo20161461,
 
-title = "HPCmatlab: A Framework for Fast Prototyping of Parallel Applications in Matlab ",
-
-journal = "Procedia Computer Science ",
-
-volume = "80",
-
-number = "",
-
-pages = "1461 - 1472",
-
-year = "2016",
-
-note = "International Conference on Computational Science 2016, \{ICCS\} 2016, 6-8 June 2016, San Diego, California, \{USA\} ",
-
-issn = "1877-0509",
-
-doi = "http://dx.doi.org/10.1016/j.procs.2016.05.467",
-
-url = "http://www.sciencedirect.com/science/article/pii/S1877050916309516",
-
-author = "Xinchen Guo and Mukul Dave and Mohamed Sayeed",
-
-keywords = "Parallel Programming",
-
-keywords = "Message Passing Interface",
-
-keywords = "Matlab",
-
-keywords = "MEX Functions",
-
-keywords = "Parallel I/O "
-
-}'
+> @article{Guo20161461,
+> title = "HPCmatlab: A Framework for Fast Prototyping of Parallel Applications in Matlab ",
+> journal = "Procedia Computer Science ",
+> volume = "80",
+> number = "",
+> pages = "1461 - 1472",
+> year = "2016",
+> note = "International Conference on Computational Science 2016, \{ICCS\} 2016, 6-8 June 2016, San Diego, California, \{USA\} ",
+> issn = "1877-0509",
+> doi = "http://dx.doi.org/10.1016/j.procs.2016.05.467",
+> url = "http://www.sciencedirect.com/science/article/pii/S1877050916309516",
+> author = "Xinchen Guo and Mukul Dave and Mohamed Sayeed",
+> keywords = "Parallel Programming",
+> keywords = "Message Passing Interface",
+> keywords = "Matlab",
+> keywords = "MEX Functions",
+> keywords = "Parallel I/O "
+> }
