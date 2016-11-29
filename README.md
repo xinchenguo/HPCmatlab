@@ -25,8 +25,7 @@ The User Guide for this version is included in form of the PDF file
 For users new to parallel programming, we recommend trying out the simple 
 send-receive examples first to get started with the framework.
 
-For details on implementation and performance results, refer our conference paper 
-also under `doc/`
+For details on implementation and performance results, refer our conference paper (Open Access)
 
 URL: http://www.sciencedirect.com/science/article/pii/S1877050916309516
 
