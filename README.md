@@ -29,7 +29,7 @@ For details on implementation and performance results, refer our conference pape
 
 URL: http://dx.doi.org/10.1016/j.procs.2016.05.467
 
-A PDF copy of this paper can also be found under `doc/`. (CC BY-NC-ND 4.0 [link] (https://creativecommons.org/licenses/by-nc-nd/4.0/ "CC BY-NC-ND 4.0"))
+A PDF copy of this paper can also be found under `doc/`. ([CC BY-NC-ND 4.0] (https://creativecommons.org/licenses/by-nc-nd/4.0/ "CC BY-NC-ND 4.0"))
 
 Examples
 --------
