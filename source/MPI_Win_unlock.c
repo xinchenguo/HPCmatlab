@@ -23,7 +23,6 @@
                ayush02mishra@gmail.com, msayeed@asu.edu
 */
 
-
 #include "mex.h"
 #include "mpi.h"
 void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
@@ -39,7 +38,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 	
 	plhs[0]=mxCreateDoubleScalar((double)MPI_Win_unlock(	
 													(int)mxGetScalar(prhs[0]), /* rank */
-													(MPI_Win)mxGetScalar(prhs[1]) /*win*/
+													*((MPI_Win *)mxGetData(prhs[1])) /*win*/
 												));
 
 	nlhs=1;

@@ -3,7 +3,6 @@
 #SBATCH -t 00:05:00
 #SBATCH -o test.out
 #SBATCH -e test.err
-module load matlab/2015b
-module load intel-mpi/5.0
+module load matlab/R2014a
 export MATLABPATH=${MATLABPATH}:../../matlab
-srun -n 2 --mpi=pmi2 matlab -r "itest,exit"
+mpirun -n 4 matlab -r "seek,exit"

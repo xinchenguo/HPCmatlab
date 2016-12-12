@@ -23,28 +23,27 @@
                ayush02mishra@gmail.com, msayeed@asu.edu
 */
 
-
 #include "mex.h"
 #include "mpi.h"
 void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 {
-	if(nrhs!=6) 
+	if(nrhs!=7) 
 	{
-		mexErrMsgIdAndTxt("MyToolbox:arrayProduct:nrhs","6 inputs required.");
+		mexErrMsgIdAndTxt("MyToolbox:arrayProduct:nrhs","7 inputs required.");
 	}
-	if(nlhs!=2) 
+	if(nlhs!=1) 
 	{
-		mexErrMsgIdAndTxt("MyToolbox:arrayProduct:nlhs","2 output required.");
+		mexErrMsgIdAndTxt("MyToolbox:arrayProduct:nlhs","1 output required.");
 	}
-	MPI_Request request;
+
 	plhs[0]=mxCreateDoubleScalar((double)MPI_Isend(	mxGetData(prhs[0]),  
 													(int)mxGetScalar(prhs[1]), 
 													*((MPI_Datatype *)mxGetData(prhs[2])), 
 													(int)mxGetScalar(prhs[3]),  
 													(int)mxGetScalar(prhs[4]), 
 													*((MPI_Comm *)mxGetData(prhs[5])),
-													&request
+													(MPI_Request *)mxGetData(prhs[6])
 												));	
-	plhs[1] = mxCreateDoubleScalar((double)request);
+	nlhs=1;
 	return; 
 }

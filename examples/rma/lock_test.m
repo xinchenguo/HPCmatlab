@@ -3,11 +3,11 @@ addpath ../../octave
 GetMPIEnvironment;
 % Initialize a MPI Window object
 win = MPI_Win;
-%commsize=0;
-%rank=0;
+commsize=0;
+rank=0;
 err=MPI_Init(0,0);
-[err,commsize]=MPI_Comm_size(MPI_COMM_WORLD);
-[err,rank]=MPI_Comm_rank(MPI_COMM_WORLD);
+err=MPI_Comm_size(MPI_COMM_WORLD,commsize);
+err=MPI_Comm_rank(MPI_COMM_WORLD,rank);
 disp(['I am rank ' num2str(rank) ' out of ' num2str(commsize)]);
 
 n=5;
@@ -23,14 +23,13 @@ if rank==0
     end
     disp('On rank 0:');
     data
-    [err,win]=MPI_Win_create(data, bytes, 4, MPI_INFO_NULL, MPI_COMM_WORLD);
+    err=MPI_Win_create(data, bytes, 4, MPI_INFO_NULL, MPI_COMM_WORLD, win);
     err=MPI_Barrier(MPI_COMM_WORLD);
 end
 
 if rank==1
-    [err,win]=MPI_Win_create(0, 0, 4, MPI_INFO_NULL, MPI_COMM_WORLD);
+    err=MPI_Win_create(0, 0, 4, MPI_INFO_NULL, MPI_COMM_WORLD, win);
     err=MPI_Barrier(MPI_COMM_WORLD);
-    win
     err=MPI_Win_lock(MPI_LOCK_EXCLUSIVE,0,0,win);
     disp('At rank 1, before Get from 0:');
     data
@@ -41,7 +40,7 @@ if rank==1
 end
 
 if rank==2
-    [err,win]=MPI_Win_create(0, 0, 4, MPI_INFO_NULL, MPI_COMM_WORLD);
+    err=MPI_Win_create(0, 0, 4, MPI_INFO_NULL, MPI_COMM_WORLD, win);
     data(:,:)=1;
     err=MPI_Win_lock(MPI_LOCK_EXCLUSIVE,0,0,win);
     err=MPI_Put(data, n*n, MPI_INT, 0, 0, n*n, MPI_INT, win);
