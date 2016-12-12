@@ -22,7 +22,6 @@
     Email IDs: xinchen.guo@asu.edu, mukul92@gmail.com,
                ayush02mishra@gmail.com, msayeed@asu.edu
 */
-
 /*
  *  This mex function returns the communicator MPI_COMM_WORLD
  */

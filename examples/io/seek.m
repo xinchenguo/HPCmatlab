@@ -1,3 +1,4 @@
+% MPI I/O read-write example using individual file pointers
 addpath('../../octave');
 GetMPIEnvironment
 status=MPI_Status;
@@ -5,8 +6,8 @@ fh=MPI_File;
 commsize=0;
 rank=0;
 err=MPI_Init(0,0);
-[err,commsize]=MPI_Comm_size(MPI_COMM_WORLD);
-[err,rank]=MPI_Comm_rank(MPI_COMM_WORLD);
+err=MPI_Comm_size(MPI_COMM_WORLD,commsize);
+err=MPI_Comm_rank(MPI_COMM_WORLD,rank);
 disp(['I am rank ' num2str(rank) ' out of ' num2str(commsize)]);
 
 err = MPI_File_open(MPI_COMM_WORLD, 'trial', bitor(MPI_MODE_RDWR,MPI_MODE_CREATE), MPI_INFO_NULL, fh);

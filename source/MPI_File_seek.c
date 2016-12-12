@@ -23,7 +23,6 @@
                ayush02mishra@gmail.com, msayeed@asu.edu
 */
 
-
 #include "mex.h"
 #include "mpi.h"
 #include <string.h>

@@ -4,4 +4,4 @@
 #SBATCH -o test.out
 #SBATCH -e test.err
 module load octave/4.0.0
-srun -n 4 --mpi=pmi2 octave itest.m
+mpirun -n 4 octave itest.m

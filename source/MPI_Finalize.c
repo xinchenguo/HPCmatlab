@@ -23,7 +23,6 @@
                ayush02mishra@gmail.com, msayeed@asu.edu
 */
 
-
 #include "mex.h"
 #include "mpi.h"
 void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])

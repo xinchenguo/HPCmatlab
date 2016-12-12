@@ -23,7 +23,6 @@
                ayush02mishra@gmail.com, msayeed@asu.edu
 */
 
-
 #include "mex.h"
 #include "mpi.h"
 #include <string.h>
@@ -55,6 +54,20 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 												    *((MPI_Aint *)mxGetData(prhs[3])), /*info*/
 													&fh /*MPI_File*/
 												    ));
+	
+	/*
+	int rcode=0;
+	
+	char errstr[MPI_MAX_ERROR_STRING];
+	int errlen=0;
+	plhs[0]=mxCreateDoubleScalar((double)-1);										
+	rcode=MPI_File_open(MPI_COMM_WORLD,"testfile",MPI_MODE_WRONLY,MPI_INFO_NULL,&fh);
+												
+	MPI_Error_string(rcode,errstr,&errlen);											
+												
+	mexPrintf("fh=%ld, rcode=%d\n errstr=%s\n",fh,rcode,errstr);
+	*/
+
 	memcpy(mxGetData(prhs[4]),&fh,sizeof(MPI_File));
 	nlhs=1;
 	mxFree(filename);

@@ -1,5 +1,5 @@
-module load mvapich2/2.1-gnu-4.9.2
-module load matlab/2016a
+module load mvapich2
+module load matlab/R2014a
 rm -r -f matlab
 mkdir matlab
 Files=./source/*.c
