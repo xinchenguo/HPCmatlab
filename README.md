@@ -25,11 +25,11 @@ The User Guide for this version is included in form of the PDF file
 For users new to parallel programming, we recommend trying out the simple 
 send-receive examples first to get started with the framework.
 
-For details on implementation and performance results, refer our conference paper 
-also under `doc/`
+For details on implementation and performance results, refer our conference paper
 
-URL: http://www.sciencedirect.com/science/article/pii/S1877050916309516
+URL: http://dx.doi.org/10.1016/j.procs.2016.05.467
 
+A PDF copy of this paper can also be found under `doc/`. ([CC BY-NC-ND 4.0] (https://creativecommons.org/licenses/by-nc-nd/4.0/ "CC BY-NC-ND 4.0"))
 
 Examples
 --------
@@ -67,3 +67,28 @@ Contact
 Use our GitHub page for questions, bug reports, comments, feedback and suggestions:
 
 https://github.com/xinchenguo/HPCmatlab/issues
+
+Citation
+--------
+
+```
+@article{Guo20161461,
+title = "HPCmatlab: A Framework for Fast Prototyping of Parallel Applications in Matlab ",
+journal = "Procedia Computer Science ",
+volume = "80",
+number = "",
+pages = "1461 - 1472",
+year = "2016",
+note = "International Conference on Computational Science 2016, \{ICCS\} 2016, 6-8 June 2016, San Diego, California, \{USA\} ",
+issn = "1877-0509",
+doi = "http://dx.doi.org/10.1016/j.procs.2016.05.467",
+url = "http://www.sciencedirect.com/science/article/pii/S1877050916309516",
+author = "Xinchen Guo and Mukul Dave and Mohamed Sayeed",
+keywords = "Parallel Programming",
+keywords = "Message Passing Interface",
+keywords = "Matlab",
+keywords = "MEX Functions",
+keywords = "Parallel I/O "
+}
+```
+
