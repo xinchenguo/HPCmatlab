@@ -9,6 +9,8 @@ It uses the Message Passing Interface (MPI) for sending and receiving messages a
 different Matlab processes. The users can use mex functions with syntax similar 
 to the MPI standard syntax.
 
+### This version of HPCmatlab is compatible with Matlab versions up to R2015a only. It is not compatible with Matlab versions R2015b onward.
+
 
 Version 1.0
 -----------
