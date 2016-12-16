@@ -60,6 +60,10 @@ The MEX functions will be placed under `matlab/` directory.
   * At the start of your Matlab script, use Matlab's `addpath` function.
 Refer examples for how to do this.
 
+4. Use the default MPI command (`mpirun`,`mpiexec`,`srun`, etc.) of a cluster to start MATLAB with HPCmatlab framework. 
+   * `mpirun -n 2 matlab -r "test,exit"`
+   * Refer to your cluster's user guide or consult your system admin for the proper MPI command
+
 
 Contact
 -------
