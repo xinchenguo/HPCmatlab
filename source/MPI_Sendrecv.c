@@ -51,13 +51,13 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 													*((MPI_Comm *)mxGetData(prhs[10])), /*comm*/
 													&status /*status*/
 												));
-
+/*
     *((int *)mxGetData(mxGetField(prhs[11],0,"count_lo")))=status.count_lo;
 	*((int *)mxGetData(mxGetField(prhs[11],0,"count_hi_and_cancelled")))=status.count_hi_and_cancelled;
 	*((int *)mxGetData(mxGetField(prhs[11],0,"MPI_SOURCE")))=status.MPI_SOURCE;
 	*((int *)mxGetData(mxGetField(prhs[11],0,"MPI_TAG")))=status.MPI_TAG;
 	*((int *)mxGetData(mxGetField(prhs[11],0,"MPI_ERROR")))=status.MPI_ERROR;
-
+*/
 	nlhs=1;
 	return; 
 }

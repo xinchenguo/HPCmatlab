@@ -47,11 +47,13 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 
 	for (ii=0;ii<count;ii=ii+1)
 	{
+/*
 	*((int *)mxGetData(mxGetField(prhs[2],ii,"count_lo")))=status[ii].count_lo;
 	*((int *)mxGetData(mxGetField(prhs[2],ii,"count_hi_and_cancelled")))=status[ii].count_hi_and_cancelled;
 	*((int *)mxGetData(mxGetField(prhs[2],ii,"MPI_SOURCE")))=status[ii].MPI_SOURCE;
 	*((int *)mxGetData(mxGetField(prhs[2],ii,"MPI_TAG")))=status[ii].MPI_TAG;
 	*((int *)mxGetData(mxGetField(prhs[2],ii,"MPI_ERROR")))=status[ii].MPI_ERROR;
+*/
 	}
 
 	nlhs=1;
